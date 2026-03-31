@@ -1,0 +1,146 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES (Typography + Colors) */
+:root {
+    --primary: #2c2c2c;
+    --secondary: #a67c52;
+    --bg: #f7f5f2;
+    --text: #222;
+    --muted: #777;
+
+    --font-sm: 0.875rem;
+    --font-base: 1rem;
+    --font-lg: 1.2rem;
+    --font-xl: 1.5rem;
+    --font-2xl: 2rem;
+}
+
+/* BASE */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* NAVBAR (Flexbox ✅) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.navbar a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--text);
+    position: relative;
+}
+
+/* Hover underline */
+.navbar a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: var(--secondary);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* TYPOGRAPHY */
+h1 { font-size: var(--font-2xl); }
+h2 { font-size: var(--font-xl); }
+h3 { font-size: var(--font-lg); }
+
+p {
+    font-size: var(--font-base);
+    color: var(--muted);
+}
+
+/* HERO */
+header {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/* BUTTON */
+button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+}
+
+/* PROJECT GRID (Grid ✅) */
+.projects {
+    display: grid;
+    gap: 25px;
+    padding: 40px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* IMAGE */
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* FORM */
+form {
+    max-width: 400px;
+    margin: 40px auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+/* RESPONSIVE (Mobile First ✅) */
+@media (min-width: 768px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

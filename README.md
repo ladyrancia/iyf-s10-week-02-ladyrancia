@@ -1,4 +1,3 @@
-# iyf-s10-week-02-ladyrancia
 # 🌐 My Portfolio Website
 
 ## 📌 Project Overview

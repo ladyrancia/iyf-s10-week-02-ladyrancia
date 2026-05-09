@@ -1,17 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>project 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detailed case study of LedgerFlow - financial dashboard built by Alex Rivera">
+    <title>LedgerFlow | Alex Rivera</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<h1>Portfolio Website</h1>
-<p>This is my first project built using HTML and CSS.</p>
+<nav class="navbar">
+    <div class="nav-brand">
+        <a href="index.html">AR</a>
+    </div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
 
-<a href="projects.html">
-    <button>Back</button>
-</a>
+<main class="project-detail">
+    <header class="project-header">
+        <div class="project-meta">
+            <a href="projects.html" class="back-link">&larr; All Projects</a>
+            <div class="project-tags">
+                <span class="tag">React</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Stripe API</span>
+            </div>
+        </div>
+        <h1>LedgerFlow</h1>
+        <p class="project-subtitle">Financial Dashboard for Small Business Accounting</p>
+    </header>
+
+    <div class="project-content">
+        <section class="project-section">
+            <h2>Overview</h2>
+            <p>LedgerFlow is a comprehensive financial dashboard I architected and built for small business owners who need better visibility into their cash flow without the complexity of traditional accounting software. The platform automates bank synchronization, generates professional invoices, and provides real-time analytics on revenue, expenses, and profitability.</p>
+            <p>During my 18-month engagement as lead developer, I shipped 47 releases, grew the codebase from 0 to 45k lines, and helped the startup raise a $2.1M seed round.</p>
+        </section>
+
+        <section class="project-section">
+            <h2>The Problem</h2>
+            <p>Small business owners were spending 8-12 hours per week on manual bookkeeping using spreadsheets or expensive QuickBooks solutions that had steep learning curves. They needed:</p>
+            <ul>
+                <li>Automated transaction categorization with machine learning</li>
+                <li>One-click invoice generation and recurring billing</li>
+                <li>Real-time cash flow forecasting</li>
+                <li>Tax-ready reports without accountant expertise</li>
+            </ul>
+        </section>
+
+        <section class="project-section">
+            <h2>My Solution</h2>
+            <p>I designed a lean, modular architecture centered around a GraphQL API gateway that unified access to Plaid for bank sync, Stripe for payments, and custom reporting engines.</p>
+
+            <div class="tech-stack">
+                <div class="stack-column">
+                    <h3>Frontend Stack</h3>
+                    <ul>
+                        <li>React 18 with TypeScript</li>
+                        <li>Vite for blazing-fast builds</li>
+                        <li>React Query for server state</li>
+                        <li>Recharts for data visualization</li>
+                        <li>Tailwind CSS for styling</li>
+                    </ul>
+                </div>
+                <div class="stack-column">
+                    <h3>Backend Stack</h3>
+                    <ul>
+                        <li>Node.js with Express</li>
+                        <li>PostgreSQL with TimescaleDB</li>
+                        <li>Redis for caching</li>
+                        <li>Jest + Supertest for integration tests</li>
+                        <li>AWS (EC2, S3, Lambda)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>Key Features Built</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <h3>Bank Sync Engine</h3>
+                    <p>Integrated with Plaid to connect 3,000+ financial institutions. Built a reconciliation system that matches imported transactions to created invoices with 94% accuracy using category prediction.</p>
+                </div>
+                <div class="feature">
+                    <h3>Smart Invoicing</h3>
+                    <p>Drag-and-drop invoice builder with customizable templates. Automated reminder emails and recurring billing schedules. Supports partial payments and payment links.</p>
+                </div>
+                <div class="feature">
+                    <h3>Cash Flow Forecast</h3>
+                    <p>Projected cash position 90 days out based on incoming invoices, recurring expenses, and historical patterns. Exportable PDF reports ready for bank meetings.</p>
+                </div>
+                <div class="feature">
+                    <h3>Expense Tracking</h3>
+                    <p>Receipt scanning via OCR with automatic categorization. Mileage tracking with GPS integration. Tax category assignment for easy 1099 preparation.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>Results & Impact</h2>
+            <div class="metrics">
+                <div class="metric">
+                    <span class="metric-value">50,000+</span>
+                    <span class="metric-label">Transactions processed monthly</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">99.9%</span>
+                    <span class="metric-label">Uptime SLA maintained</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">40%</span>
+                    <span class="metric-label">API latency reduction</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">$2.1M</span>
+                    <span class="metric-label">Seed funding raised</span>
+                </div>
+            </div>
+            <p>LedgerFlow processed over $200M in annual transaction volume and maintained a Net Promoter Score of 72. The platform was acquired in 2024 by a larger fintech consolidator.</p>
+        </section>
+
+        <section class="project-section">
+            <h2>Code Samples</h2>
+            <div class="code-snippet">
+                <pre><code>// Transaction categorization using TF-IDF similarity
+const categorizeTransaction = async (description: string): Promise<Category> => {
+  const vector = await tfidf.vectorize(description);
+  const similarities = categories.map(cat => ({
+    category: cat,
+    score: cosineSimilarity(vector, cat.vector)
+  }));
+
+  const bestMatch = similarities.reduce((a, b) =>
+    a.score > b.score ? a : b
+  );
+
+  return bestMatch.category;
+};</code></pre>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>Challenges & Learnings</h2>
+            <p>The biggest challenge was handling the scale of financial data while keeping the UI responsive. I learned to implement cursor-based pagination at the database level and virtualized list rendering in React for large transaction tables.</p>
+            <p>Security was paramount—implemented end-to-end encryption for sensitive data, audit logging for all financial operations, and passed SOC 2 Type II compliance audit.</p>
+        </section>
+    </div>
+
+    <footer class="project-footer">
+        <a href="projects.html" class="btn-secondary">&larr; Back to Projects</a>
+        <a href="contact.html" class="btn-primary">Let's Work Together</a>
+    </footer>
+</main>
 
 </body>
 </html>

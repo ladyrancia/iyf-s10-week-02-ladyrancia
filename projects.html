@@ -2,46 +2,124 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Alex Rivera's portfolio of web applications, from fintech platforms to healthcare systems">
+    <title>Projects | Alex Rivera</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <nav class="navbar">
-    <h2>MyPortfolio</h2>
-    <div>
+    <div class="nav-brand">
+        <a href="index.html">AR</a>
+    </div>
+    <div class="nav-links">
         <a href="index.html">Home</a>
+        <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
-        <a href="project1.html">
-    <button>View</button>
-</a>
     </div>
 </nav>
 
-<section class="projects">
+<main class="projects-page">
+    <header class="page-header">
+        <h1>Featured Projects</h1>
+        <p>A selection of work I've shipped across fintech, healthcare, and e-commerce.</p>
+    </header>
 
-    <div class="card">
-    <img src="https://via.placeholder.com/300" alt="">
-    <h3>Portfolio Website</h3>
-    <p>A clean responsive portfolio.</p>
-    <button>View</button>
-</div>
+    <section class="projects-grid">
+        <article class="project-card featured">
+            <div class="project-image">
+                <div class="image-placeholder">
+                    <span>LedgerFlow</span>
+                </div>
+            </div>
+            <div class="project-content">
+                <div class="project-tags">
+                    <span class="tag">React</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">PostgreSQL</span>
+                </div>
+                <h2>LedgerFlow</h2>
+                <p class="project-description">A comprehensive financial dashboard for small business accounting. Features automated bank synchronization, invoicing, and real-time cash flow analytics. Processes 10k+ transactions monthly with 99.9% uptime SLA.</p>
+                <div class="project-links">
+                    <a href="project1.html" class="project-link">View Case Study &rarr;</a>
+                    <a href="#" class="project-link external" target="_blank">Live Demo &nearr;</a>
+                </div>
+            </div>
+        </article>
 
-    <div class="card">
-        <h3>Project 2</h3>
-        <p>My second project.</p>
-        <button>View</button>
-    </div>
+        <article class="project-card">
+            <div class="project-image">
+                <div class="image-placeholder secondary">
+                    <span>MedConnect</span>
+                </div>
+            </div>
+            <div class="project-content">
+                <div class="project-tags">
+                    <span class="tag">Next.js</span>
+                    <span class="tag">GraphQL</span>
+                    <span class="tag">WebSockets</span>
+                    <span class="tag">AWS</span>
+                </div>
+                <h2>MedConnect</h2>
+                <p class="project-description">HIPAA-compliant telemedicine platform connecting patients with specialists. Includes encrypted video calls, e-prescriptions, and integrated EHR syncing. Used by 50+ clinics across 3 states.</p>
+                <div class="project-links">
+                    <a href="#" class="project-link">View Case Study &rarr;</a>
+                    <a href="#" class="project-link external" target="_blank">GitHub &nearr;</a>
+                </div>
+            </div>
+        </article>
 
-    <div class="card">
-        <h3>Project 3</h3>
-        <p>My third project.</p>
-        <button>View</button>
-    </div>
+        <article class="project-card">
+            <div class="project-image">
+                <div class="image-placeholder tertiary">
+                    <span>CartWise</span>
+                </div>
+            </div>
+            <div class="project-content">
+                <div class="project-tags">
+                    <span class="tag">Vue 3</span>
+                    <span class="tag">Firebase</span>
+                    <span class="tag">Stripe</span>
+                </div>
+                <h2>CartWise</h2>
+                <p class="project-description">Smart shopping assistant browser extension that tracks price drops across 200+ retailers. Saves users an average of $147 per year. 15k+ weekly active users with 4.8/5 Chrome Web Store rating.</p>
+                <div class="project-links">
+                    <a href="#" class="project-link">View Case Study &rarr;</a>
+                    <a href="#" class="project-link external" target="_blank">Chrome Store &nearr;</a>
+                </div>
+            </div>
+        </article>
 
-</section>
+        <article class="project-card">
+            <div class="project-image">
+                <div class="image-placeholder quaternary">
+                    <span>TaskSync</span>
+                </div>
+            </div>
+            <div class="project-content">
+                <div class="project-tags">
+                    <span class="tag">React Native</span>
+                    <span class="tag">Expo</span>
+                    <span class="tag">SQLite</span>
+                </div>
+                <h2>TaskSync</h2>
+                <p class="project-description">Cross-platform productivity app for distributed teams. Features offline-first sync, team task boards, and progress analytics. Selected for Techstars Austin 2023 accelerator program.</p>
+                <div class="project-links">
+                    <a href="#" class="project-link">View Case Study &rarr;</a>
+                    <a href="#" class="project-link external" target="_blank">App Store &nearr;</a>
+                </div>
+            </div>
+        </article>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2024 Alex Rivera. Built with semantic HTML, CSS Grid, and attention to detail.</p>
+</footer>
 
 </body>
 </html>

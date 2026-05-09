@@ -2,29 +2,128 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about Alex Rivera - Full-Stack Developer with 4+ years of experience building web applications">
+    <title>About | Alex Rivera</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <nav class="navbar">
-    <h2>MyPortfolio</h2>
-    <div>
+    <div class="nav-brand">
+        <a href="index.html">AR</a>
+    </div>
+    <div class="nav-links">
         <a href="index.html">Home</a>
+        <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
-        <a href="project1.html">
-    <button>View</button>
-</a>
     </div>
 </nav>
 
-<header>
-    <h1>Welcome to My Portfolio</h1>
-    <p>I build clean and modern websites.</p>
-    <button>View Projects</button>
-</header>
+<main class="about-page">
+    <section class="about-hero">
+        <div class="about-image">
+            <div class="avatar-placeholder">
+                <span>AR</span>
+            </div>
+        </div>
+        <div class="about-intro">
+            <h1>Alex Rivera</h1>
+            <p class="role">Full-Stack Developer</p>
+            <p class="location">Austin, Texas</p>
+            <p class="tagline">Building scalable web applications with clean architecture and thoughtful UX.</p>
+        </div>
+    </section>
+
+    <section class="about-content">
+        <div class="section-block">
+            <h2>Background</h2>
+            <p>I started coding in 2019 after teaching myself JavaScript through free online resources. Fast forward to today, I've shipped production code for startups and established companies across fintech, healthcare, and e-commerce sectors.</p>
+            <p>My focus has always been on writing maintainable code and creating intuitive user experiences. I believe good software should be invisible—just work, reliably and quickly.</p>
+        </div>
+
+        <div class="section-block">
+            <h2>Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>React 18+</li>
+                        <li>TypeScript</li>
+                        <li>Next.js 14+</li>
+                        <li>Tailwind CSS</li>
+                        <li>React Query</li>
+                        <li>Zustand</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                        <li>NestJS</li>
+                        <li>GraphQL</li>
+                        <li>REST APIs</li>
+                        <li>PostgreSQL</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>DevOps & Tools</h3>
+                    <ul>
+                        <li>Docker</li>
+                        <li>AWS (EC2, S3, Lambda)</li>
+                        <li>Git & GitHub</li>
+                        <li>GitHub Actions</li>
+                        <li>Vercel</li>
+                        <li>Linux</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-block">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3>Senior Software Engineer</h3>
+                        <span class="timeline-date">2023 – Present</span>
+                    </div>
+                    <p class="timeline-company">FinTech Solutions Inc.</p>
+                    <p>Lead development of a payment processing platform serving 50k+ merchants. Architected microservices handling $200M+ annual transaction volume. Reduced API latency by 40% through query optimization and caching strategies.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3>Full-Stack Developer</h3>
+                        <span class="timeline-date">2021 – 2023</span>
+                    </div>
+                    <p class="timeline-company">HealthBridge Digital</p>
+                    <p>Built HIPAA-compliant patient portal used by 12 hospitals. Implemented real-time messaging with WebSockets. Mentored 2 junior developers and established code review standards.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3>Junior Web Developer</h3>
+                        <span class="timeline-date">2019 – 2021</span>
+                    </div>
+                    <p class="timeline-company">StartupLab</p>
+                    <p>Developed responsive marketing websites for seed-stage startups. Collaborated with designers to implement pixel-perfect UIs. Built internal tools that saved the team 10+ hours per week.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-block">
+            <h2>Education</h2>
+            <p><strong>B.S. Computer Science</strong> — University of Texas at Austin, 2019</p>
+            <p>Graduated Magna Cum Laude. Relevant coursework: Data Structures, Algorithms, Database Systems, Software Engineering.</p>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2024 Alex Rivera. Built with semantic HTML, CSS Grid, and attention to detail.</p>
+</footer>
 
 </body>
 </html>

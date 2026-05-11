@@ -356,6 +356,44 @@ a:hover {
     border-bottom: none;
 }
 
+/* SKILLS LIST */
+.skills-list {
+    list-style: disc;
+    margin-left: 24px;
+    color: var(--text-light);
+}
+
+.skills-list li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* SKILLS GRID - TWO COLUMNS */
+.skills-grid-two-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+}
+
+/* SKILLS TAGS */
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.skill-tag {
+    background: var(--bg-alt);
+    color: var(--secondary);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: var(--font-sm);
+    font-weight: 500;
+    border: 1px solid var(--border);
+}
+
 /* TIMELINE */
 .timeline {
     display: flex;

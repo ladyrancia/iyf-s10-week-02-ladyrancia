@@ -49,6 +49,12 @@ iyf-s10-week-02-yourusername/
 
 ---
 
+## 🔗 Live Site
+
+🔗 **[View Live Portfolio](https://ladyrancia.github.io/iyf-s10-week-02-ladyrancia/)**
+
+---
+
 ## 📸 Preview
 
 This project includes a simple, clean portfolio layout with multiple pages and responsive design.
